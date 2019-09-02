@@ -19,26 +19,25 @@ class PlayerModal extends Component {
     componentWillMount() {
         if(this.props.openedPlayer != null)
             Object.keys(this.props.players).forEach((key, id) => {
-                // console.log(key +" "+ this.state.groups2[key] +" "+ id);
-                // groups.push(this.state.groups2[group]);
+                // console.log(key +" "+ this.state.groups[key] +" "+ id);
+                // groups.push(this.state.groups[group]);
                 // console.log(this.props.id);
-                if(this.props.openedGroup == id) {
+                if(this.props.openedPlayer == id) {
                     this.setState({
+                        prefix: this.props.players[key].prefix,
                         name: key,
-                        prefix: this.props.groups[key].prefix,
-                        inheritance: this.props.groups[key].inheritance,
-                        default: this.props.groups[key].default,
-                        build: this.props.groups[key].build,
-                        permissions: this.props.groups[key].permissions
+                        suffix: this.props.players[key].prefix,
+                        groups: this.props.players[key].groups,
+                        permissions: this.props.players[key].permissions
                     })
                 }
             });
     }
 
     savePlayer = () => {
-        if(this.props.openedGroup != null)
-            this.props.saveGroup(this.props.openedGroup, this.state);
-        else this.props.saveGroup(null, this.state);
+        if(this.props.openedPlayer != null)
+            this.props.savePlayer(this.props.openedPlayer, this.state);
+        else this.props.savePlayer(null, this.state);
     }
 
     changePrefix = (event) => {
@@ -50,7 +49,7 @@ class PlayerModal extends Component {
     }
 
     changeSuffix = (event) => {
-        this.setState({prefix: event.target.value});
+        this.setState({suffix: event.target.value});
     }
 
 
@@ -89,7 +88,7 @@ class PlayerModal extends Component {
 
                         <div className="controls">
                             <a onClick={this.props.controlPlayerModal} className="cancel">Cancel</a>
-                            <a onClick={this.saveGroup} className="save">Save player</a>
+                            <a onClick={this.savePlayer} className="save">Save player</a>
                         </div>
                     </div>
                     

@@ -20,8 +20,8 @@ class GroupModal extends Component {
     componentWillMount() {
         if(this.props.openedGroup != null)
             Object.keys(this.props.groups).forEach((key, id) => {
-                // console.log(key +" "+ this.state.groups2[key] +" "+ id);
-                // groups.push(this.state.groups2[group]);
+                // console.log(key +" "+ this.state.groups[key] +" "+ id);
+                // groups.push(this.state.groups[group]);
                 // console.log(this.props.id);
                 if(this.props.openedGroup == id) {
                     this.setState({

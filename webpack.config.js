@@ -5,8 +5,8 @@ module.exports = {
     entry: "./src/Index.jsx",
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: './main.js',
-        publicPath: '/'
+        filename: './[hash].main.js',
+        publicPath: '/pexgen/'
     },
     module: {
         rules: [
