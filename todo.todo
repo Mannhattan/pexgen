@@ -1,0 +1,50 @@
+☐ idea for a landing page with full dark wool bg and logo + instructions/creator info
+
+☐ make a option to load plugins which will be used on server and read permissions from them to include them in permissions list
+
+☐ essentials.build
+
+
+
+
+groups: [
+                {
+                    name: "group 1",
+                    prefix: "[ADMIN] ",
+                    inheritance: "group2",
+                    default: false,
+                    build: false,
+                    permissions: [
+                        "essentials.lightning",
+                        "essentials.socialspy",
+                        "essentials.vanish",
+                        "essentials.sethome.*"
+                    ]
+                },
+                {
+                    name: "group 2",
+                    prefix: "[ADMIN] ",
+                    inheritance: "",
+                    default: false,
+                    build: false,
+                    permissions: [
+                        "essentials.lightning",
+                        "essentials.socialspy",
+                        "essentials.vanish",
+                        "essentials.sethome.*"
+                    ]
+                },
+                {
+                    name: "group 3",
+                    prefix: "[ADMIN] ",
+                    inheritance: "",
+                    default: false,
+                    build: false,
+                    permissions: [
+                        "essentials.lightning",
+                        "essentials.socialspy",
+                        "essentials.vanish",
+                        "essentials.sethome.*"
+                    ]
+                }
+            ],
