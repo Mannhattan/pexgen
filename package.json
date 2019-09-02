@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage":"https://mannhattan.github.io/pexgen",
+  "homepage": "https://mannhattan.github.io/pexgen/",
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
     "dev": "webpack --mode development",
@@ -31,6 +31,7 @@
   "dependencies": {
     "css-loader": "^2.1.1",
     "file-loader": "^3.0.1",
+    "gh-pages": "^2.1.1",
     "json-to-pretty-yaml": "^1.2.2",
     "node-sass": "^4.11.0",
     "path": "^0.12.7",
